@@ -2,6 +2,7 @@ package com.cydeo.library_tests.pages;
 
 import com.cydeo.library_tests.utilities.Driver;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -27,4 +28,12 @@ public class BasePage {
     @FindBy(xpath = "//a[@class='dropdown-item']")
     public WebElement logoutButton;
 
+    public void logOut(){
+        dropdownBar.click();
+        logoutButton.click();
+    }
+
+    public void navigateModule(String moduleName){
+        Driver.getDriver().findElement(By.xpath("//span[@class='title'][.='"+moduleName+"']")).click();
+    }
 }
