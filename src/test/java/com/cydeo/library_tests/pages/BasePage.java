@@ -12,16 +12,19 @@ public class BasePage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath = "//button[@class=\"button nav__item active\"]")
-    public WebElement viewAllOrdersNavItemButton;
+    @FindBy(xpath = "//span[normalize-space()='Dashboard']")
+    public WebElement dashboard;
 
-    @FindBy(xpath = "/html/body/div[1]/nav/div[2]/a[2]/button")
-    public WebElement viewAllProductsNavItemButton;
+    @FindBy(xpath = "//span[normalize-space()='Users']")
+    public WebElement users;
 
-    @FindBy(xpath = "/html/body/div[1]/nav/div[2]/a[3]/button")
-    public WebElement orderNavItemButton;
+    @FindBy(xpath = "//span[normalize-space()='Books']")
+    public WebElement books;
 
-    @FindBy(xpath = "//button[@class=\"button __logout\"]")
+    @FindBy(xpath = "//a[@id='navbarDropdown']")
+    public WebElement dropdownBar;
+
+    @FindBy(xpath = "//a[@class='dropdown-item']")
     public WebElement logoutButton;
 
 }
