@@ -14,19 +14,13 @@ import java.sql.*;
 
 public class US05_GenreMostBorrowed_StepDef {
 
-//    String dbUrl = ConfigurationReader.getProperty("dbUrlLibrary3");
-//    String dbUsername = ConfigurationReader.getProperty("dbUsernameLibrary3");
-//    String dbPassword = ConfigurationReader.getProperty("dbPasswordLibrary3");
-//
-//    Connection conn;
-//    ResultSet rs;
-//    Statement statement;
+
     String actual;
 
     @Given("Establish the database connection")
     public void establish_the_database_connection() throws SQLException {
 
-//        DB_Util.createConnection(dbUrl,dbUsername,dbPassword);
+
         DB_Util.createConnectionConfigProp(1);
 
     }

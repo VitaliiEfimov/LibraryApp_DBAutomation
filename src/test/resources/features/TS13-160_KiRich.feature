@@ -1,4 +1,4 @@
-@wip_kirich @db
+#@wip_kirich @db
 Feature: As a student, I should be able to borrow a book
 
 Scenario: Students borrow new books
