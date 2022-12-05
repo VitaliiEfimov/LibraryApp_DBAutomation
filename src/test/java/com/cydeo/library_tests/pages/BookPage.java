@@ -37,4 +37,16 @@ public class BookPage extends BasePage {
     @FindBy (xpath = "//table[@id='tbl_books']/tbody/tr/td[1]/a")
     public List<WebElement> borrowBookButtons;
 
+    @FindBy(xpath = "//*[@id=\"tbl_books\"]//thead//tr//th[7]")
+    public WebElement borrowedBy;
+
+    @FindBy(xpath = "//*[@id=\"borrowed_list\"]/tbody/tr[27]/td[6]")
+    public WebElement NotReturned;
+
+    @FindBy(xpath = "//*[@id='menu_item']//li[2]//a//span[1]")
+    public WebElement borrowingBooks;
+
+    @FindBy(xpath = "//*[@class='btn btn-primary btn-sm  ']")
+    public WebElement borrowBookBtn;
+
 }
