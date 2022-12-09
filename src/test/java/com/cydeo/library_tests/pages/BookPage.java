@@ -32,7 +32,7 @@ public class BookPage extends BasePage {
     public WebElement inputSearch;
 
     @FindBy (xpath = "//table[@id='tbl_books']/tbody/tr/td[3]")
-    public WebElement bookNameInTable;
+    public List<WebElement> bookNameInTable;
 
     @FindBy (xpath = "//table[@id='tbl_books']/tbody/tr/td[1]/a")
     public List<WebElement> borrowBookButtons;
@@ -48,5 +48,8 @@ public class BookPage extends BasePage {
 
     @FindBy(xpath = "//*[@class='btn btn-primary btn-sm  ']")
     public WebElement borrowBookBtn;
+
+   @FindBy (id = "book_categories")
+    public WebElement selectCategories;
 
 }
