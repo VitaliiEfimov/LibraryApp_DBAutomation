@@ -1,7 +1,6 @@
 package com.cydeo.library_tests.step_definitions;
 
 import com.cydeo.library_tests.pages.BookPage;
-import com.cydeo.library_tests.pages.DashBoardPage;
 import com.cydeo.library_tests.pages.LoginPage;
 import com.cydeo.library_tests.utilities.BrowserUtils;
 import com.cydeo.library_tests.utilities.DB_Util;
@@ -23,11 +22,11 @@ public class TS13_159_AddNewBookToTheLibrary {
         BrowserUtils.waitFor(2);
     }
 
-    @Given("I navigate to {string} page")
-    public void i_navigate_to_page(String moduleName) {
-        new DashBoardPage().navigateModule(moduleName);
-
-    }
+//    @Given("I navigate to {string} page")
+//    public void i_navigate_to_page(String moduleName) {
+//        new DashBoardPage().navigateModule(moduleName);
+//
+//    }
 
     @When("the librarian click to add book")
     public void the_librarian_click_to_add_book() {
@@ -84,7 +83,7 @@ public class TS13_159_AddNewBookToTheLibrary {
         BrowserUtils.waitFor(2);
 
 
-        String actualBookName = bookPage.bookNameInTable.getText();
+        String actualBookName = bookPage.bookNameInTable.get(0).getText();
         System.out.println("actualBookName = " + actualBookName);
         System.out.println("expectedBookName = " + expectedBookName);
 

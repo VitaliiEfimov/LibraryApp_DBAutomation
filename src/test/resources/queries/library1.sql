@@ -35,3 +35,4 @@ select full_name,b.name,bb.borrowed_date from users u
 where full_name='Test Student 1'
 order by 3 desc;
 
+select  name from book_categories;
