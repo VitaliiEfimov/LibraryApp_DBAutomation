@@ -7,7 +7,9 @@ import java.util.List;
 
 public class BookPage extends BasePage {
 
+
     @FindBy (xpath = "//a[.=' Add Book']")
+
     public WebElement addBookButton;
 
     @FindBy (xpath = "//input[@name='name']")
@@ -37,6 +39,7 @@ public class BookPage extends BasePage {
     @FindBy (xpath = "//table[@id='tbl_books']/tbody/tr/td[1]/a")
     public List<WebElement> borrowBookButtons;
 
+
     @FindBy(xpath = "//*[@id=\"tbl_books\"]//thead//tr//th[7]")
     public WebElement borrowedBy;
 
@@ -53,3 +56,4 @@ public class BookPage extends BasePage {
     public WebElement selectCategories;
 
 }
+

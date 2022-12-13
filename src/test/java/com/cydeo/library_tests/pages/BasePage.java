@@ -37,3 +37,5 @@ public class BasePage {
         Driver.getDriver().findElement(By.xpath("//span[@class='title'][.='"+moduleName+"']")).click();
     }
 }
+
+
