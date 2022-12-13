@@ -62,6 +62,8 @@ public class AnnaE_BooksStepDefs {
     @Then("the librarian verify new book by {string}")
     public void the_librarian_verify_new_book_by(String expectedBookName) {
         BrowserUtils.waitFor(3);
+        bookPage.inputSearch.sendKeys(expectedBookName);
+        BrowserUtils.waitFor(2);
         String actualBookName = bookPage.bookNameInTable.getText();
         System.out.println("actualBookName = " + actualBookName);
         System.out.println("expectedBookName = " + expectedBookName);
@@ -73,11 +75,11 @@ public class AnnaE_BooksStepDefs {
     public void the_librarian_verify_new_book_from_database_by(String bookName) {
 
         String query = "select id,name,author from books\n" +
-                "where name = 'Clean Code' and author='Robert C.Martin'\n" +
-                "order by id desc;";
+        "where name = '" + bookName + "' order by id desc;";
         DB_Util.runQuery(query);
 
-        String expectedBorrowedBook = DB_Util.getFirstRowFirstColumn();
+        String expectedBorrowedBook = DB_Util.getCellValue(1,2);
+        System.out.println("expectedBorrowedBook = " + expectedBorrowedBook);
         Assert.assertEquals(expectedBorrowedBook, bookName);
     }
 
