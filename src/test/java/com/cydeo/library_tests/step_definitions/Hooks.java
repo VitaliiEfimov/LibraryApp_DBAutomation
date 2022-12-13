@@ -25,10 +25,12 @@ public class Hooks {
 
     @Before
     public void setUp(){
+
 //        System.out.println("this is coming from BEFORE");
         Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         Driver.getDriver().manage().window().maximize();
         Driver.getDriver().get(ConfigurationReader.getProperty("url1"));
+
 
 
     }
