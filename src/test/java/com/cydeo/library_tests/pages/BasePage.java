@@ -7,7 +7,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class BasePage {
+/**
+ * parent class for concrete Page object classes
+ * provides constructor with initElements method for re-usability
+ * abstract - to prevent instantiation.
+ */
+public abstract  class BasePage {
 
     public BasePage() {
         PageFactory.initElements(Driver.getDriver(), this);
