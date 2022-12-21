@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
+
     public  LoginPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
@@ -20,6 +21,7 @@ public class LoginPage {
     public WebElement passwordBox;
 
     @FindBy (tagName = "button")
+
     public WebElement loginButton;
 
 
@@ -27,6 +29,7 @@ public class LoginPage {
 
         String username = ConfigurationReader.getProperty(userType + "_username");
         String password = ConfigurationReader.getProperty("password");
+
 
         emailBox.sendKeys(username);
         passwordBox.sendKeys(password);
@@ -40,4 +43,5 @@ public class LoginPage {
         passwordBox.sendKeys(password);
         loginButton.click();
     }
+
 }
