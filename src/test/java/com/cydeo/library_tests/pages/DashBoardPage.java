@@ -17,16 +17,18 @@ public class DashBoardPage extends BasePage {
     public WebElement booksNumber;
 
 
-    public String getModuleCount(String module) {
+
+    public String getModuleCount(String module){
         //h6[normalize-space(.)='Users']//..//h2
 
-        String locator = "//h6[normalize-space(.)='" + module + "']//..//h2";
+        String locator="//h6[normalize-space(.)='"+module+"']//..//h2";
+
 
         WebElement elementOfModule = Driver.getDriver().findElement(By.xpath(locator));
 
         return elementOfModule.getText();
     }
 
-
-
 }
+
+

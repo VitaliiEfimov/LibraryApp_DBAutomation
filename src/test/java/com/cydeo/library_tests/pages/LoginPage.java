@@ -7,17 +7,21 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
-    public LoginPage() {
+
+    public  LoginPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(id = "inputEmail")
+
+    @FindBy (id = "inputEmail")
+
     public WebElement emailBox;
 
-    @FindBy(id = "inputPassword")
+    @FindBy (id = "inputPassword")
     public WebElement passwordBox;
 
-    @FindBy(tagName = "button")
+    @FindBy (tagName = "button")
+
     public WebElement loginButton;
 
 
@@ -30,16 +34,14 @@ public class LoginPage {
         emailBox.sendKeys(username);
         passwordBox.sendKeys(password);
         loginButton.click();
-
     }
 
-    public void login(String email, String password) {
 
-        emailBox.sendKeys(email);
+    public void login(String userName, String password) {
+
+        emailBox.sendKeys(userName);
         passwordBox.sendKeys(password);
         loginButton.click();
-
-
     }
 
 }
